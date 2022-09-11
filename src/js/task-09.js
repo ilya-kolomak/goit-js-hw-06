@@ -5,8 +5,12 @@ const bodyRef = document.querySelector('body');
 
 const buttonRef = bodyRef.querySelector('.change-color');
 
+const colorRef = document.querySelector('.color');
+
 const handelChange = () => {
   bodyRef.style.backgroundColor = getRandomHexColor();
+  const currentColor = getRandomHexColor();
+  colorRef.textContent = currentColor;
 };
 buttonRef.addEventListener('click', handelChange);
 console.log('click', handelChange);
